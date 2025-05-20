@@ -3,23 +3,18 @@ module.exports = {
   env: {
     node: true,
   },
-
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
-    'eslint:recommended',
+    '@vue/airbnb',
   ],
   parserOptions: {
-    parser: '@babel/eslint-parser',
     requireConfigFile: false,
+    parser: '@babel/eslint-parser',
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'linebreak-style': 0,
-    'comma-dangle': ['error', 'always-multiline'],
-    'semi': ['error', 'always'],
     'operator-linebreak': 0,
-
   },
 };
-
